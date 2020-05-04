@@ -2,16 +2,16 @@ import sqlite3
 
 
 def create_database_table():
-    connection = sqlite3.connect('vehicleManager.db')
+    connection = sqlite3.connect('vehiclesManager.db')
     cursor = connection.cursor()
 
     query_script = '''
         CREATE TABLE IF NOT EXISTS BaseUser(
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        user_name VARCHAR(50) UNIQUE NOT NULL,
+        user_name VARCHAR(50) NOT NULL,
         email VARCHAR(50) UNIQUE NOT NULL,
         phone_number INTEGER NOT NULL,
-        address VARCHAR(50) UNIQUE NOT NULL
+        address VARCHAR(50) NOT NULL
         );
 
         CREATE TABLE IF NOT EXISTS Client(
@@ -26,12 +26,12 @@ def create_database_table():
         );
 
         CREATE TABLE IF NOT EXISTS Vehicle(
-        id INTEGER PRIMARY KEY UNIQUE NOT NULL,
-        category VARCHAR(50) UNIQUE NOT NULL,
+        id INTEGER PRIMARY KEY NOT NULL,
+        category VARCHAR(50) NOT NULL,
         make VARCHAR(50) UNIQUE NOT NULL,
-        model VARCHAR(50) UNIQUE NOT NULL,
+        model VARCHAR(50) NOT NULL,
         register_number VARCHAR(50) UNIQUE NOT NULL,
-        gear_box VARCHAR(50) UNIQUE NOT NULL,
+        gear_box VARCHAR(50) NOT NULL,
         owner INTEGER NOT NULL,
         FOREIGN KEY(owner) REFERENCES Client(base_id)
         );
@@ -54,8 +54,8 @@ def create_database_table():
         date VARCHAR(10) NOT NULL,
         start_hour VARCHAR(5) NOT NULL,
         vehicle INTEGER UNIQUE NOT NULL,
-        bill REAL UNIQUE NOT NULL,
-        mechanic_service INTEGER UNIQUE NOT NULL,
+        bill REAL NOT NULL,
+        mechanic_service INTEGER NOT NULL,
         FOREIGN KEY(vehicle) REFERENCES Vehicle(id),
         FOREIGN KEY(mechanic_service) REFERENCES MechanicService(id)
         );
