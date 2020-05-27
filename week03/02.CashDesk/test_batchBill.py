@@ -16,7 +16,7 @@ class Test_BatchBill_Class(unittest.TestCase):
         values = [10, 20, 50, 100]
         bills = [Bill(value) for value in values]
         batch = BatchBill(bills)
-        index=3
+        index = 3
         result = batch[index]
 
         self.assertEqual(result, Bill(100))

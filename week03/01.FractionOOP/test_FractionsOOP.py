@@ -44,18 +44,18 @@ class TestFraction(unittest.TestCase):
 
     def test_addition_fractions_works_correct_for_non_simplifiable_result(self):
 
-            fraction1 = Fraction(1, 9)
-            fraction2 = Fraction(1, 3)
+        fraction1 = Fraction(1, 9)
+        fraction2 = Fraction(1, 3)
 
-            result = fraction1 + fraction2
+        result = fraction1 + fraction2
 
-            self.assertEqual(result, Fraction(12, 27))
+        self.assertEqual(result, Fraction(12, 27))
 
     def test_fractions_greater_with_different_factions(self):
-            fraction1 = Fraction(2, 5)
-            fraction2 = Fraction(1, 5)
+        fraction1 = Fraction(2, 5)
+        fraction2 = Fraction(1, 5)
 
-            self.assertTrue(fraction1 > fraction2, 'It is not greater ')
+        self.assertTrue(fraction1 > fraction2, 'It is not greater ')
 
     def test_addition_fractions_works_correct_for_non_simplifiable_result_with_equal_denominator(self):
         fraction1 = Fraction(1, 5)

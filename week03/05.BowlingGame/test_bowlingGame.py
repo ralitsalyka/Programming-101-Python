@@ -78,6 +78,5 @@ class TestBowlingGameClass(unittest.TestCase):
         self.assertEqual(result, 122)
 
 
-
 if __name__ == '__main__':
     unittest.main()

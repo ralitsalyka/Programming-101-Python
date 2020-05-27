@@ -90,8 +90,8 @@ class Playlist:
     def save(self):
         playlistName = self.name.replace(' ', '-')
         data = {
-        "name": self.name,
-        "songs": [song.__dict__ for song in self.songs]
+            "name": self.name,
+            "songs": [song.__dict__ for song in self.songs]
         }
         with open(f'playlist-data/{playlistName}.json', 'w') as f:
             json.dump(data, f)

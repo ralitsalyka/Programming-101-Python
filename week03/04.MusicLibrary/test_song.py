@@ -11,7 +11,7 @@ class TestClassSong(unittest.TestCase):
             exc = err
 
         self.assertIsNotNone(exc)
-        self.assertEqual(str(exc),'Incorrect input!')
+        self.assertEqual(str(exc), 'Incorrect input!')
 
     def test_raises_exception_when_length_of_minutes_are_bigger_than_60(self):
         exc = None
@@ -22,7 +22,7 @@ class TestClassSong(unittest.TestCase):
             exc = err
 
         self.assertIsNotNone(exc)
-        self.assertEqual(str(exc),'Incorrect input!')
+        self.assertEqual(str(exc), 'Incorrect input!')
 
     def test_raises_exception_when_length_of_seconds_are_bigger_than_60_where_there_is_hours(self):
         exc = None
@@ -33,7 +33,7 @@ class TestClassSong(unittest.TestCase):
             exc = err
 
         self.assertIsNotNone(exc)
-        self.assertEqual(str(exc),'Incorrect input!')
+        self.assertEqual(str(exc), 'Incorrect input!')
 
     def test_raises_exception_when_length_of_minutes_are_bigger_than_60_where_there_is_hours(self):
         exc = None
@@ -44,7 +44,7 @@ class TestClassSong(unittest.TestCase):
             exc = err
 
         self.assertIsNotNone(exc)
-        self.assertEqual(str(exc),'Incorrect input!')
+        self.assertEqual(str(exc), 'Incorrect input!')
 
     def test_raises_if_length_of_seconds_is_less_than_two_numbers(self):
         exc = None
@@ -55,7 +55,7 @@ class TestClassSong(unittest.TestCase):
             exc = err
 
         self.assertIsNotNone(exc)
-        self.assertEqual(str(exc),'Incorrect input!')
+        self.assertEqual(str(exc), 'Incorrect input!')
     def test_raises_if_length_of_minutes_is_less_than_two_numbers(self):
         exc = None
 
@@ -65,7 +65,7 @@ class TestClassSong(unittest.TestCase):
             exc = err
 
         self.assertIsNotNone(exc)
-        self.assertEqual(str(exc),'Incorrect input!')
+        self.assertEqual(str(exc), 'Incorrect input!')
     def test_raises_if_length_of_hours_is_less_than_two_numbers(self):
         exc = None
 
@@ -75,7 +75,7 @@ class TestClassSong(unittest.TestCase):
             exc = err
 
         self.assertIsNotNone(exc)
-        self.assertEqual(str(exc),'Incorrect input!')
+        self.assertEqual(str(exc), 'Incorrect input!')
 
     def test_raises_if_count_of_is_more_than_three_elements(self):
         exc = None
@@ -86,7 +86,7 @@ class TestClassSong(unittest.TestCase):
             exc = err
 
         self.assertIsNotNone(exc)
-        self.assertEqual(str(exc),'Incorrect input!')
+        self.assertEqual(str(exc), 'Incorrect input!')
 
     def test_string_representation(self):
         song = Song(title="Odin", artist="Manowar", album="The Sons of Odin", length="04:44")

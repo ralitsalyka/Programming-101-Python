@@ -17,7 +17,8 @@ class Song:
         return self.__str__()
 
     def __eq__(self, other):
-        return self.title == other.title and self.artist == other.artist and self.album == other.album and self.length == other.length 
+        return self.title == other.title and self.artist == other.artist and\
+            self.album == other.album and self.length == other.length
 
     def __hash__(self):
         return hash(self.title + self.artist + self.album)
@@ -72,5 +73,7 @@ class Song:
 
 def main():
     pass
+
+
 if __name__ == '__main__':
     main()

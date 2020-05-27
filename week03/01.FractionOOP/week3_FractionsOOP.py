@@ -23,7 +23,7 @@ class Fraction:
         simplified_other = other.simplify()
 
         return simplified_self.num == simplified_other.num and\
-         simplified_self.denom == simplified_other.denom
+            simplified_self.denom == simplified_other.denom
 
     def simplify(self):
         divider = gcd(self.num, self.denom)

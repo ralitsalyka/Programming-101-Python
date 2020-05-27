@@ -33,10 +33,9 @@ class Test_CashBill_Class(unittest.TestCase):
         self.assertEqual(result, 190)
 
     def test_total_fuction(self):
-        desk=CashDesk()
-        result=desk.total()
+        desk = CashDesk()
+        result = desk.total()
         self.assertEqual(result, 0)
-
 
 
 if __name__ == '__main__':

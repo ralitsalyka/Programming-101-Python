@@ -1,6 +1,7 @@
 import unittest
 from bill import Bill
 
+
 class TestBillClass(unittest.TestCase):
     def test_raises_exception_when_amount_is_not_int(self):
         exc = None
