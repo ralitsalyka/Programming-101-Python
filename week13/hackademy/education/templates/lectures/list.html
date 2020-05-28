@@ -1,0 +1,44 @@
+
+{% extends "lectures/base.html" %} {% block content %}
+<a href="{% url 'education:lectures:create' %}">Add new</a>
+
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+</style>
+</head>
+<body>
+
+
+
+{% if lectures %}
+<table style="background-color:#ffe6cc">
+    <thead>
+        <tr>
+            <th>Lecture</th>
+            <th>Week</th>
+            <th>Course</th>
+            <th>Url</th>
+        </tr>
+    </thead>
+<ul>
+    {% for lecture in lectures %}
+    <tr>
+        <td><a href="{% url 'education:lectures:detail' lecture.lecture_id %}">{{lecture.name}}</a></td>
+        <td><a href="{% url 'education:lectures:detail' lecture.lecture_id %}">{{lecture.week}}</a></td>
+        <td><a href="{% url 'education:lectures:detail' lecture.lecture_id %}">{{lecture.course}}</a></td>
+        <td><a href="{% url 'education:lectures:detail' lecture.lecture_id %}">{{lecture.url}}</a></td>
+    </tr>
+    {% endfor %}
+</ul>
+</table>
+{% else %}
+<p><strong>No lectures yet.</strong></p>
+{% endif %}
+{% endblock %}
